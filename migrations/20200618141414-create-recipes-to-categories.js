@@ -23,11 +23,12 @@ module.exports = {
             model: 'Recipes',
             key: 'id'
           },
-      }
-    
-  },
+         }
+      },
 
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('RecipesCategories');
+      down: (queryInterface, Sequelize) => {
+        return queryInterface.dropTable('RecipesCategories');
+      }
+    })
   }
 };
