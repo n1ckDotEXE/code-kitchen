@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.TEXT
   }, {});
   Categories.associate = function(models) {
-    // associations can be defined here
+    Categories.belongsToMany(Models.Categories, { through: 'RecipesCategories' });
   };
   return Categories;
 };
